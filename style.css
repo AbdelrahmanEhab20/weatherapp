@@ -4,9 +4,11 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   background: #222;
 }
+
 .card {
   width: 90%;
   max-width: 470px;
@@ -17,12 +19,14 @@ body {
   text-align: center;
   border-radius: 20px;
 }
+
 .search {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .search input {
   border: 0;
   outline: 0;
@@ -35,6 +39,7 @@ body {
   margin-right: 16px;
   font-size: 18px;
 }
+
 .search button {
   border: 0;
   outline: 0;
@@ -44,18 +49,23 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+
 .search button img {
   width: 16px;
 }
+
 .weather-icon {
-  width: 170px;
+  width: 100%;
+  max-width: 170px;
   margin-top: 30px;
 }
+
 .weather h1 {
   font-size: 45px;
   font-weight: 400;
   margin-top: -10px;
 }
+
 .details {
   display: flex;
   align-items: center;
@@ -63,27 +73,89 @@ body {
   padding: 0 20px;
   margin-top: 50px;
 }
+
 .col {
   display: flex;
   align-items: center;
   text-align: left;
 }
+
 .col img {
   width: 40px;
   margin-right: 10px;
 }
+
 .humidity,
 .wind {
   font-size: 28px;
   margin-top: -6px;
 }
+
 .weather {
   display: none;
 }
+
 .error {
   text-align: left;
   font-size: 14px;
   margin-left: 10px;
   margin-top: 10px;
   display: none;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 30px 25px;
+  }
+
+  .search input {
+    font-size: 16px;
+  }
+
+  .weather-icon {
+    max-width: 150px;
+  }
+
+  .weather h1 {
+    font-size: 35px;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .details {
+    flex-direction: column;
+    gap: 40px;
+    align-self: start;
+    justify-content: space-evenly;
+  }
+  .search button {
+    width: 40px;
+    height: 40px;
+  }
+  .search input {
+    padding: 5px 15px;
+    height: 45px;
+    border-radius: 30px;
+    flex: 1;
+  }
+  .search button img {
+    width: 12px;
+  }
+}
+@media screen and (max-width: 335px) {
+  .search button {
+    width: 30px;
+    height: 30px;
+  }
+  .search input {
+    padding: 5px 15px;
+    height: 35px;
+    border-radius: 30px;
+    flex: 1;
+  }
 }
